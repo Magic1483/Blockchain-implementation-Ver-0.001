@@ -34,8 +34,9 @@ fn main() {
 
 
     
-
+    // block_on allow exexcute async fn in sync runtime
     task::block_on(async {
+        // spawn new task in thread pool
         task::spawn(
             node_test(
                 String::from("1st node - N"),
